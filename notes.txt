@@ -1,0 +1,56 @@
+#########
+basics of DOM 
+#########
+
+const container = document.querySelector('#container');
+// selects the #container div
+
+console.dir(container.firstElementChild);
+// selects teh first child of #container => display
+
+const controls = document.querySelector('.controls');
+// selects the controls div
+
+console.dir(controls.previousElementSibling);
+// selects the prior sibling => .display
+
+
+#########  
+Query Selectors (choosing nodes)
+#########
+
+element.querySelector(selector) - returns first match
+element.querySelectorAll(selectors) - returns "nodelist" of all matches
+*** note this is not an array though it looks like one, you can use Array.from()
+to fix this
+
+#########
+Element Creation
+#########
+
+document.createElement(tagName,[options]) 
+- creates new element of tag type tagName. [options] adds optional parameters
+
+const div = document.createElement('div');
+- does NOT put element into DOM, only in memory for manipulation 
+(adding styles, classes, ids, text, etc.)
+
+#########
+Append elements (adding them to DOM)
+#########
+
+parentNode.appendChild(childNode)
+-appends childNode as last child of parentNode
+
+parentNode.insertBefore(newNode, referenceNode)
+- append newNode before referenceNode
+
+#########
+Remove elements
+#########
+
+
+
+
+
+
