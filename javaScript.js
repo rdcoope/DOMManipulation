@@ -43,7 +43,7 @@ btn.addEventListener('click', function (e){
 })
 
 const btn2 = document.querySelector('#btn2');
-btn2.addEventListener('click', () => {
+btn2.addEventListener('dblclick', () => {
     alert("Hello Again, did you miss me?")
 });
 
