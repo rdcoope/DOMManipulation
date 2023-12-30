@@ -3,16 +3,16 @@ basics of DOM
 #########
 
 const container = document.querySelector('#container');
-// selects the #container div
+     selects the #container div
 
 console.dir(container.firstElementChild);
-// selects teh first child of #container => display
+     selects teh first child of #container => display
 
 const controls = document.querySelector('.controls');
-// selects the controls div
+     selects the controls div
 
 console.dir(controls.previousElementSibling);
-// selects the prior sibling => .display
+     selects the prior sibling => .display
 
 
 #########  
@@ -49,8 +49,62 @@ parentNode.insertBefore(newNode, referenceNode)
 Remove elements
 #########
 
+paretNode.removeChild(child)
 
+#########
+Altering elements
+#########
 
+const div = document.createElement('div');
+    creates new variable referrenced by div
 
+#########
+Adding inline style
+#########
 
+div.style.color = 'blue';
+    adds the indicated style rule (sets text color)
+
+div.style.cssText = 'color: blue; background: white;';
+or
+div.setAttribute('style', 'color: blue; background: white;');
+    adds several rules (variations exist)
+
+DO NOT use - for CSS java will try subtracting. Use camelCase instead, it will
+do the same thing.
+bracket notation works as well
+
+div.style.background-color 
+    does not work
+div.style.backgroundColor
+div.style['background-color']
+    works
+
+#########
+Editing attributes
+#########
+
+div.setAttribute('id','theDiv');
+    if id exists, update it to 'theDiv', else create the specified id
+
+div.getAttribute('id');
+    retuns the value of specified attributes
+
+div.removeAttribute('id');
+    removes the specified attributes
+
+#########
+Adding text content
+#########
+
+div.textContent = 'Hello World!'; 
+    creates text node and inserts it into div
+
+#########
+Adding HTML content
+#########
+
+div.innerHTML = '<span>Hello World!</span>'
+    use sparingly because it can be a security risk. 
+    preferably for text use .textContent
 
